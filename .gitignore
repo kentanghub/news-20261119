@@ -1,4 +1,11 @@
+# dependencies
 node_modules/
+
+# build output
 out/
+
+# temp files
 *.png.tmp
+
+# bundle artifacts
 transcripts.tar.gz

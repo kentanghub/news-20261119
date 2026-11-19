@@ -1,39 +1,31 @@
-// render.mjs — renders design/news.html → entry.png via Playwright (headless, no root).
-//
-// The design is deterministic (no network, no clock, fixed 1024x1024 viewport), so
-// re-rendering it writes the same bytes every time. Run it from a directory that
-// has `playwright` in its node_modules (this box: ~/.hermes/cache/scratch/makefun/shots),
-// and on a no-root box prefix LD_LIBRARY_PATH=$HOME/chromelibs for the GUI libs.
+// render.mjs — renders design/news.html to entry.png at exactly 1024x1024.
+// Uses Playwright's Chromium; needs LD_LIBRARY_PATH for shared libs on this box.
 import { chromium } from 'playwright';
+import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { join } from 'node:path';
 
-const here = fileURLToPath(new URL('.', import.meta.url));
-const out = process.argv[2] ?? join(here, '..', 'entry.png');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const htmlPath = resolve(__dirname, 'news.html');
+const outPath = resolve(__dirname, '..', 'entry.png');
 
-const b = await chromium.launch({ headless: true });
-const p = await b.newPage({ viewport: { width: 1024, height: 1024 }, deviceScaleFactor: 1 });
-const pageErrors = [];
-p.on('pageerror', (e) => pageErrors.push(String(e)));
-await p.goto('file://' + join(here, 'news.html'), { waitUntil: 'load' });
-await p.waitForTimeout(500);
-
-// Report exactly how close the content sits to the 1024px canvas edge so a clipped
-// footer is caught before the screenshot is trusted (target footBottom <= ~1015).
-const measure = await p.evaluate(() => {
-  const page = document.querySelector('.page');
-  const foot = document.querySelector('.foot');
-  return {
-    pageH: page ? page.scrollHeight : null,
-    footBottom: foot ? foot.getBoundingClientRect().bottom : null,
-  };
+const browser = await chromium.launch({
+  args: ['--no-sandbox', '--disable-gpu', '--hide-scrollbars'],
 });
-console.log('measure', JSON.stringify(measure));
 
-await p.screenshot({ path: out, clip: { x: 0, y: 0, width: 1024, height: 1024 } });
-await b.close();
-if (pageErrors.length) {
-  console.error('page errors:', pageErrors.join('; '));
-  process.exit(1);
+try {
+  const page = await browser.newPage({ viewport: { width: 1024, height: 1024 } });
+  await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle' });
+
+  // Measure the actual content height to detect overflow or clipping.
+  const dims = await page.evaluate(() => {
+    const el = document.querySelector('.page') || document.body;
+    const r = el.getBoundingClientRect();
+    return { pageH: r.height, footBottom: r.bottom };
+  });
+  console.log('measure', JSON.stringify(dims));
+
+  await page.screenshot({ path: outPath, type: 'png', clip: { x: 0, y: 0, width: 1024, height: 1024 } });
+  console.log(`written ${outPath}`);
+} finally {
+  await browser.close();
 }
-console.log('written', out);
