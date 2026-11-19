@@ -1,377 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<title>The Day In The World — 19 Nov 2026</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { width: 1024px; height: 1024px; overflow: hidden; }
-  body {
-    font-family: 'Liberation Serif', Georgia, 'Times New Roman', serif;
-    background: #f7f2e8;
-    color: #14110a;
-  }
-  .page { width: 1024px; padding: 14px 26px 6px; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1024px;height:1024px;overflow:hidden}
+body{font-family:'Liberation Serif',Georgia,'Times New Roman',serif;background:#f7f2e8;color:#14110a}
+.page{width:1024px;padding:14px 26px 6px}
 
-  .mast { border-bottom: 4px solid #17140e; padding-bottom: 4px; }
-  .kicker-row { display: flex; justify-content: space-between; align-items: baseline;
-    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 11.5px; letter-spacing: 2.2px;
-    color: #5c5443; text-transform: uppercase; margin-bottom: 2px; }
-  .kicker-row b { color: #a01813; }
-  .title-row { display: flex; justify-content: space-between; align-items: flex-end; }
-  h1 { font-size: 44px; line-height: 1; letter-spacing: 0.5px; font-weight: 700; }
-  .dateline { text-align: right; }
-  .dateline .d1 { font-size: 30px; font-weight: 700; color: #a01813; line-height: 1; }
-  .dateline .d2 { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 11px; letter-spacing: 1.8px; color: #5c5443; text-transform: uppercase; margin-top: 3px; }
-  .subline { margin-top: 5px; font-style: italic; font-size: 14.5px; color: #4a4436; }
-  .subline b { color: #a01813; font-style: normal; letter-spacing: 1px; font-family: 'Liberation Sans', Arial, sans-serif; font-size: 12px; }
+.mast{border-bottom:4px solid #17140e;padding-bottom:4px}
+.kicker-row{display:flex;justify-content:space-between;align-items:baseline;font-family:'Liberation Sans',Arial,sans-serif;font-size:11.5px;letter-spacing:2.2px;color:#5c5443;text-transform:uppercase;margin-bottom:2px}
+.kicker-row b{color:#a01813}
+.title-row{display:flex;justify-content:space-between;align-items:flex-end}
+h1{font-size:44px;line-height:1;letter-spacing:.5px;font-weight:700}
+.dateline{text-align:right}
+.dateline .d1{font-size:30px;font-weight:700;color:#a01813;line-height:1}
+.dateline .d2{font-family:'Liberation Sans',Arial,sans-serif;font-size:11px;letter-spacing:1.8px;color:#5c5443;text-transform:uppercase;margin-top:3px}
+.subline{margin-top:5px;font-style:italic;font-size:14.5px;color:#4a4436}
+.subline b{color:#a01813;font-style:normal;letter-spacing:1px;font-family:'Liberation Sans',Arial,sans-serif;font-size:12px}
 
-  .leads { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 16px; margin-top: 6px;
-    padding: 6px 0 5px; border-bottom: 3px solid #17140e; }
-  .lead { display: flex; gap: 9px; align-items: flex-start; }
-  .lead .num { flex: 0 0 26px; height: 26px; background: #b3862d; color: #fff; border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 16px; font-weight: 700; }
-  .lead .ico { flex: 0 0 46px; height: 46px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-  .lead .txt { flex: 1; min-width: 0; }
-  .lead h2 { font-size: 19.5px; line-height: 1.05; margin: 1px 0 3px; font-weight: 700; }
-  .lead .body { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 12.5px; line-height: 1.28; color: #37322a; }
-  .lead .body b { color: #14110a; }
+.leads{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 16px;margin-top:6px;padding:6px 0 5px;border-bottom:3px solid #17140e}
+.lead{display:flex;gap:9px;align-items:flex-start}
+.lead .num{flex:0 0 26px;height:26px;background:#b3862d;color:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Liberation Sans',Arial,sans-serif;font-size:16px;font-weight:700}
+.lead .ico{flex:0 0 46px;height:46px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.lead .txt{flex:1;min-width:0}
+.lead h2{font-size:19.5px;line-height:1.05;margin:1px 0 3px;font-weight:700}
+.lead .body{font-family:'Liberation Sans',Arial,sans-serif;font-size:12.5px;line-height:1.28;color:#37322a}
+.lead .body b{color:#14110a}
 
-  .tag { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 10.5px; font-weight: 700;
-    letter-spacing: 1.4px; text-transform: uppercase; }
-  .tag .sep { color: #8d8471; font-weight: 400; }
-  .r-apac   { color: #b3241f; }
-  .r-mideast{ color: #c05e0a; }
-  .r-europe { color: #6a3f96; }
-  .r-africa { color: #96700f; }
-  .r-americas{ color: #2f5fa8; }
-  .r-global { color: #5c5443; }
-  .r-space  { color: #2f7a3d; }
+.tag{font-family:'Liberation Sans',Arial,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.r-apac{color:#b3241f}.r-mideast{color:#c05e0a}.r-europe{color:#6a3f96}.r-africa{color:#96700f}.r-americas{color:#2f5fa8}.r-global{color:#5c5443}.r-space{color:#2f7a3d}
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 6px 14px; margin-top: 6px; align-content: start; }
-  .story { border-top: 3px solid #17140e; padding-top: 4px; }
-  .story .head { display: flex; gap: 8px; align-items: flex-start; }
-  .story .num { flex: 0 0 17px; height: 17px; background: #17140e; color: #f7f2e8; border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 10.5px; font-weight: 700; }
-  .story .ico { flex: 0 0 40px; height: 40px; border-radius: 7px; display: flex; align-items: center; justify-content: center; }
-  .story .txt { flex: 1; min-width: 0; }
-  .story h2 { font-size: 15.5px; line-height: 1.06; margin: 2px 0 2px; font-weight: 700; }
-  .story .body { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 11px; line-height: 1.26; color: #332e24; }
-  .story .body b { color: #14110a; }
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px 14px;margin-top:6px;align-content:start}
+.story{border-top:3px solid #17140e;padding-top:4px}
+.story .head{display:flex;gap:8px;align-items:flex-start}
+.story .num{flex:0 0 17px;height:17px;background:#17140e;color:#f7f2e8;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Liberation Sans',Arial,sans-serif;font-size:10.5px;font-weight:700}
+.story .ico{flex:0 0 40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.story .txt{flex:1;min-width:0}
+.story h2{font-size:15.5px;line-height:1.06;margin:2px 0 2px;font-weight:700}
+.story .body{font-family:'Liberation Sans',Arial,sans-serif;font-size:11px;line-height:1.26;color:#332e24}
+.story .body b{color:#14110a}
 
-  .bottom { display: grid; grid-template-columns: 356px 1fr; gap: 16px; margin-top: 5px;
-    border-top: 3px solid #17140e; padding-top: 5px; }
-  .mapbox .label, .also .label { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 11px; font-weight: 700;
-    letter-spacing: 2px; color: #a01813; text-transform: uppercase; margin-bottom: 3px; }
-  .legend { display: flex; flex-wrap: wrap; gap: 3px 9px; margin-top: 3px;
-    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 9px; letter-spacing: 0.8px;
-    text-transform: uppercase; color: #5c5443; }
-  .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 3px; vertical-align: -1px; }
-  .also .cols { columns: 2; column-gap: 18px; }
-  .also .item { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 10.2px; line-height: 1.26;
-    color: #332e24; margin-bottom: 2px; break-inside: avoid; }
-  .also .item b { color: #14110a; }
-  .also .item .n { color: #a01813; font-weight: 700; }
+.bottom{display:grid;grid-template-columns:356px 1fr;gap:16px;margin-top:5px;border-top:3px solid #17140e;padding-top:5px}
+.mapbox .label,.also .label{font-family:'Liberation Sans',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;color:#a01813;text-transform:uppercase;margin-bottom:3px}
+.legend{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:3px;font-family:'Liberation Sans',Arial,sans-serif;font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#5c5443}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:3px;vertical-align:-1px}
+.also .cols{columns:2;column-gap:18px}
+.also .item{font-family:'Liberation Sans',Arial,sans-serif;font-size:10.2px;line-height:1.26;color:#332e24;margin-bottom:2px;break-inside:avoid}
+.also .item b{color:#14110a}
+.also .item .n{color:#a01813;font-weight:700}
 
-  .data { display: grid; grid-template-columns: 1fr 1fr 1.25fr 1fr; gap: 0; margin-top: 4px;
-    border-top: 2.5px solid #17140e; border-bottom: 2.5px solid #17140e; background: #fbf7ec; }
-  .cell { padding: 6px 10px 5px; border-left: 1.5px solid #cfc6ae; }
-  .cell:first-child { border-left: none; }
-  .cell .cl { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 9.5px; letter-spacing: 1.6px;
-    text-transform: uppercase; color: #8d8471; margin-bottom: 1px; }
-  .cell .cv { font-size: 19px; font-weight: 700; line-height: 1; color: #17140e; }
-  .cell .cs { font-family: 'Liberation Sans', Arial, sans-serif; font-size: 9.5px; color: #5c5443; line-height: 1.2; margin-top: 1px; }
+.data{display:grid;grid-template-columns:1fr 1fr 1.25fr 1fr;gap:0;margin-top:4px;border-top:2.5px solid #17140e;border-bottom:2.5px solid #17140e;background:#fbf7ec}
+.cell{padding:6px 10px 5px;border-left:1.5px solid #cfc6ae}
+.cell:first-child{border-left:none}
+.cell .cl{font-family:'Liberation Sans',Arial,sans-serif;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:#8d8471;margin-bottom:1px}
+.cell .cv{font-size:19px;font-weight:700;line-height:1;color:#17140e}
+.cell .cs{font-family:'Liberation Sans',Arial,sans-serif;font-size:9.5px;color:#5c5443;line-height:1.2;margin-top:1px}
 
-  .datecheck { margin-top: 5px; background: #efe8d6; border-left: 5px solid #b3862d; padding: 3px 10px 3px 8px;
-    font-family: 'Liberation Sans', Arial, sans-serif; font-size: 10.4px; line-height: 1.25; color: #332e24; }
-  .datecheck b.dc { color: #a01813; letter-spacing: 1.2px; text-transform: uppercase; font-size: 10px; }
-  .foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 4px; padding-top: 3px;
-    border-top: 1.5px solid #b9b09b; font-family: 'Liberation Sans', Arial, sans-serif;
-    font-size: 9.2px; letter-spacing: 0.6px; color: #8d8471; text-transform: uppercase; }
+.datecheck{margin-top:5px;background:#efe8d6;border-left:5px solid #b3862d;padding:3px 10px 3px 8px;font-family:'Liberation Sans',Arial,sans-serif;font-size:10.4px;line-height:1.25;color:#332e24}
+.datecheck b.dc{color:#a01813;letter-spacing:1.2px;text-transform:uppercase;font-size:10px}
+.foot{display:flex;justify-content:space-between;gap:12px;margin-top:4px;padding-top:3px;border-top:1.5px solid #b9b09b;font-family:'Liberation Sans',Arial,sans-serif;font-size:9.2px;letter-spacing:.6px;color:#8d8471;text-transform:uppercase}
 
-  .red   { background: #f8d7d0; } .blue  { background: #d5e2f6; } .green { background: #d9ead2; }
-  .gold  { background: #f5e7c2; } .grey  { background: #e6e2d5; } .violet{ background: #e4daee; }
-  .orange{ background: #f8e3c8; }
+.red{background:#f8d7d0}.blue{background:#d5e2f6}.green{background:#d9ead2}.gold{background:#f5e7c2}.grey{background:#e6e2d5}.violet{background:#e4daee}.orange{background:#f8e3c8}
 </style>
 </head>
 <body>
 <div class="page">
-
   <div class="mast">
-    <div class="kicker-row">
-      <span>One day &middot; One image</span>
-      <span><b>40 stories &middot; 7 regions &middot; one page</b></span>
-    </div>
-    <div class="title-row">
-      <h1>THE DAY IN THE WORLD</h1>
-      <div class="dateline">
-        <div class="d1">19 NOV 2026</div>
-        <div class="d2">Thursday &middot; &numero;&nbsp;323 &middot; 42 days left in 2026</div>
-      </div>
-    </div>
+    <div class="kicker-row"><span>One day &middot; One image</span><span><b>40 stories &middot; 7 regions &middot; one page</b></span></div>
+    <div class="title-row"><h1>THE DAY IN THE WORLD</h1><div class="dateline"><div class="d1">19 NOV 2026</div><div class="d2">Thursday &middot; &numero;&nbsp;323 &middot; 42 days left in 2026</div></div></div>
     <div class="subline">Everything on this page happened, or was first reported, on <b>Thursday 19 November 2026</b> &mdash; numbered in reading order, mapped below.</div>
   </div>
 
   <div class="leads">
-    <div class="lead">
-      <div class="num">1</div>
-      <div class="ico blue">
-        <svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><circle cx="16" cy="18" r="9" fill="#d5e2f6"/><circle cx="38" cy="18" r="9" fill="#f8d7d0"/><circle cx="27" cy="37" r="9" fill="#f0b429"/><path d="M22 22 L25 29 M32 22 L29 29" stroke-width="2"/><path d="M12 47 L42 47" stroke-width="2.6"/></g></svg>
-      </div>
-      <div class="txt">
-        <div class="tag r-apac">Asia-Pacific</div>
-        <h2>Xi, Trump and Putin hold historic trilateral</h2>
-        <div class="body"><b>First three-power summit, in Shenzhen</b> &mdash; Trump&ndash;Putin 42 minutes, Xi an hour, joint session 90. A three-way declaration vows to avoid nuclear war and rein in the ICC.</div>
-      </div>
-    </div>
-    <div class="lead">
-      <div class="num">2</div>
-      <div class="ico orange">
-        <svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M27 46 L27 22"/><path d="M27 22 L20 8 L27 14 L34 8 Z" fill="#d64a41"/><circle cx="14" cy="44" r="4" fill="#d64a41"/><circle cx="40" cy="44" r="4" fill="#d64a41"/><path d="M8 44 L20 44 M34 44 L46 44"/><path d="M27 4 L29 1 M33 6 L36 4 M21 6 L18 4" stroke-width="2"/></g></svg>
-      </div>
-      <div class="txt">
-        <div class="tag r-mideast">Middle East</div>
-        <h2>Houthi missile slams a Riyadh tower</h2>
-        <div class="body"><b>Shockwave rocks the KAFD financial district</b> &mdash; material damage but no injuries; ships burn in the Strait of Hormuz as Iran's army chief vows a 'more devastating' reply.</div>
-      </div>
-    </div>
-    <div class="lead">
-      <div class="num">3</div>
-      <div class="ico green">
-        <svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><circle cx="27" cy="27" r="19" /><path d="M27 8 C33 15 33 21 27 27 C21 33 21 39 27 46" stroke-width="2"/><path d="M27 8 C21 15 21 21 27 27 C33 33 33 39 27 46" stroke-width="2"/><path d="M8 27 L46 27" stroke-width="1.6"/></g></svg>
-      </div>
-      <div class="txt">
-        <div class="tag r-global">Global &middot; climate</div>
-        <h2>COP31 starts its five-year reality check</h2>
-        <div class="body"><b>The second Global Stocktake opens in Antalya</b> with 21 issues still deadlocked &mdash; who pays, and how fast the world quits fossil fuels.</div>
-      </div>
-    </div>
+    <div class="lead"><div class="num">1</div><div class="ico blue"><svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><circle cx="16" cy="18" r="9" fill="#d5e2f6"/><circle cx="38" cy="18" r="9" fill="#f8d7d0"/><circle cx="27" cy="37" r="9" fill="#f0b429"/><path d="M22 22 L25 29 M32 22 L29 29" stroke-width="2"/><path d="M12 47 L42 47" stroke-width="2.6"/></g></svg></div><div class="txt"><div class="tag r-apac">Asia-Pacific</div><h2>Xi, Trump and Putin hold historic trilateral</h2><div class="body"><b>First three-power summit, in Shenzhen</b> &mdash; Trump&ndash;Putin 42 minutes, Xi an hour, joint session 90. A three-way declaration vows to avoid nuclear war and rein in the ICC.</div></div></div>
+    <div class="lead"><div class="num">2</div><div class="ico orange"><svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.6"><path d="M27 46 L27 22"/><path d="M27 22 L20 8 L27 14 L34 8 Z" fill="#d64a41"/><circle cx="14" cy="44" r="4" fill="#d64a41"/><circle cx="40" cy="44" r="4" fill="#d64a41"/><path d="M8 44 L20 44 M34 44 L46 44"/><path d="M27 4 L29 1 M33 6 L36 4 M21 6 L18 4" stroke-width="2"/></g></svg></div><div class="txt"><div class="tag r-mideast">Middle East</div><h2>Houthi missile slams a Riyadh tower</h2><div class="body"><b>Shockwave rocks the KAFD financial district</b> &mdash; material damage but no injuries; ships burn in the Strait of Hormuz as Iran's army chief vows a 'more devastating' reply.</div></div></div>
+    <div class="lead"><div class="num">3</div><div class="ico green"><svg width="34" height="34" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><circle cx="27" cy="27" r="19"/><path d="M27 8 C33 15 33 21 27 27 C21 33 21 39 27 46" stroke-width="2"/><path d="M27 8 C21 15 21 21 27 27 C33 33 33 39 27 46" stroke-width="2"/><path d="M8 27 L46 27" stroke-width="1.6"/></g></svg></div><div class="txt"><div class="tag r-global">Global &middot; climate</div><h2>COP31 starts its five-year reality check</h2><div class="body"><b>The second Global Stocktake opens in Antalya</b> with 21 issues still deadlocked &mdash; who pays, and how fast the world quits fossil fuels.</div></div></div>
   </div>
 
   <div class="grid">
-
-    <div class="story">
-      <div class="head">
-        <div class="num">4</div>
-        <div class="ico violet">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="10" y="12" width="34" height="28" rx="2" fill="#e4daee"/><path d="M16 20 L38 20 M16 26 L34 26 M16 32 L30 32" stroke-width="2"/><circle cx="42" cy="12" r="8" fill="#f8d7d0"/><path d="M38 8 L46 16 M46 8 L38 16" stroke="#b3241f" stroke-width="2.2"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-europe">Europe</div>
-          <h2>EU Commission hit by cyberattack</h2>
-        </div>
-      </div>
-      <div class="body"><b>Large-scale intrusion, data leakage unknown</b>; the breach lands a day after the US played down a week of outages.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">5</div>
-        <div class="ico blue">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M6 44 L27 26 L48 44 Z" stroke-width="2"/><path d="M14 34 L22 42 M27 34 L36 42 M40 34 L48 42" stroke-width="2"/><path d="M27 26 L27 14 M22 18 L22 10 M32 18 L32 10" stroke-width="2.2"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-americas">Americas</div>
-          <h2>Trump makes third high-court migrant bid</h2>
-        </div>
-      </div>
-      <div class="body"><b>Emergency motion to strip protections</b> from hundreds of thousands of Venezuelans &mdash; the third appeal to the Supreme Court.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">6</div>
-        <div class="ico gold">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="16" y="8" width="22" height="38" rx="2" fill="#f5e7c2"/><path d="M20 14 L34 14 M20 20 L34 20" stroke-width="2"/><path d="M27 26 L27 40 M21 40 L33 40" stroke-width="2"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-mideast">Middle East</div>
-          <h2>Israel elects Eisenkot ally as speaker</h2>
-        </div>
-      </div>
-      <div class="body"><b>Knesset blow to Netanyahu</b> &mdash; a Gadi Eisenkot-backed lawmaker takes the chair, narrowing the PM's grip.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">7</div>
-        <div class="ico blue">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M6 40 L20 28 L30 34 L48 14" stroke-width="0"/><path d="M8 44 C22 34 34 36 46 24" stroke="#2f5fa8" stroke-width="2.6"/><circle cx="10" cy="42" r="3" fill="#2f5fa8" stroke="none"/><circle cx="27" cy="34" r="3" fill="#2f5fa8" stroke="none"/><circle cx="44" cy="25" r="3" fill="#2f5fa8" stroke="none"/><path d="M8 48 L48 48" stroke-width="1.8"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-americas">Latin America</div>
-          <h2>Hegseth lands in Ecuador; Venezuela pact</h2>
-        </div>
-      </div>
-      <div class="body"><b>Anti-narcotics tour opens with a military accord</b> with Caracas; Honduras is the defence chief's next stop.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">8</div>
-        <div class="ico gold">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M4 28 Q14 14 27 20 Q40 26 50 14" stroke-width="2.4"/><path d="M6 36 Q16 24 27 28 Q38 32 48 24" stroke-width="2"/><path d="M10 44 L16 44 M22 44 L32 44 M38 44 L44 44" stroke-width="2.2"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-africa">Africa</div>
-          <h2>Migrant boat capsizes off Senegal</h2>
-        </div>
-      </div>
-      <div class="body"><b>At least one dead, dozens missing</b> en route to Spain; over 11,000 have reached the Canaries in two weeks.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">9</div>
-        <div class="ico grey">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="12" y="10" width="30" height="34" rx="2" fill="#e6e2d5"/><path d="M27 10 L27 44 M16 18 L38 18 M16 26 L38 26 M16 34 L38 34" stroke-width="1.8"/><circle cx="27" cy="44" r="3" fill="#b3241f" stroke="none"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-global">Global &middot; tech</div>
-          <h2>Java flaw sparks global patch warning</h2>
-        </div>
-      </div>
-      <div class="body"><b>US and South Korea urge users to update</b> after an AI-assisted hunt found a new flaw in Java, the world's third-most-used language.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">10</div>
-        <div class="ico red">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="6" y="36" width="42" height="12" rx="3"/><path d="M12 36 L12 24 A7 7 0 0 1 26 24 L26 36 M28 36 L28 16 A7 7 0 0 1 42 16 L42 36"/><path d="M27 12 L27 6 M21 12 L15 8 M33 12 L39 8" stroke-width="1.8"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-apac">Asia-Pacific</div>
-          <h2>China sacks scientist after gene trial death</h2>
-        </div>
-      </div>
-      <div class="body"><b>A six-year-old died in a gene-editing trial</b>; Beijing moves to dismiss the researcher as anger spreads over oversight.</div>
-    </div>
-
-    <div class="story">
-      <div class="head">
-        <div class="num">11</div>
-        <div class="ico green">
-          <svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M8 44 L22 32 L30 36 L46 16" stroke="#2f7a3d" stroke-width="2.8"/><path d="M46 16 L46 26 M46 16 L36 16" stroke="#2f7a3d" stroke-width="2.2"/><circle cx="12" cy="44" r="3" fill="#17140e" stroke="none"/><circle cx="27" cy="36" r="3" fill="#17140e" stroke="none"/><path d="M8 50 L48 50" stroke-width="1.8"/></g></svg>
-        </div>
-        <div class="txt">
-          <div class="tag r-apac">India</div>
-          <h2>Amazon puts $7bn into Indian renewables</h2>
-        </div>
-      </div>
-      <div class="body"><b>Solar and wind to 2030</b>; meanwhile Rajnath Singh opens the India&ndash;Japan 2+2 dialogue in Tokyo.</div>
-    </div>
-
+    <div class="story"><div class="head"><div class="num">4</div><div class="ico violet"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="10" y="12" width="34" height="28" rx="2" fill="#e4daee"/><path d="M16 20 L38 20 M16 26 L34 26 M16 32 L30 32" stroke-width="2"/><circle cx="42" cy="12" r="8" fill="#f8d7d0"/><path d="M38 8 L46 16 M46 8 L38 16" stroke="#b3241f" stroke-width="2.2"/></g></svg></div><div class="txt"><div class="tag r-europe">Europe</div><h2>EU Commission hit by cyberattack</h2></div></div><div class="body"><b>Large-scale intrusion, data leakage unknown</b>; the breach lands a day after the US played down a week of outages.</div></div>
+    <div class="story"><div class="head"><div class="num">5</div><div class="ico blue"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M6 44 L27 26 L48 44 Z" stroke-width="2"/><path d="M14 34 L22 42 M27 34 L36 42 M40 34 L48 42" stroke-width="2"/><path d="M27 26 L27 14 M22 18 L22 10 M32 18 L32 10" stroke-width="2.2"/></g></svg></div><div class="txt"><div class="tag r-americas">Americas</div><h2>Trump makes third high-court migrant bid</h2></div></div><div class="body"><b>Emergency motion to strip protections</b> from hundreds of thousands of Venezuelans &mdash; the third appeal to the Supreme Court.</div></div>
+    <div class="story"><div class="head"><div class="num">6</div><div class="ico gold"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="16" y="8" width="22" height="38" rx="2" fill="#f5e7c2"/><path d="M20 14 L34 14 M20 20 L34 20" stroke-width="2"/><path d="M27 26 L27 40 M21 40 L33 40" stroke-width="2"/></g></svg></div><div class="txt"><div class="tag r-mideast">Middle East</div><h2>Israel elects Eisenkot ally as speaker</h2></div></div><div class="body"><b>Knesset blow to Netanyahu</b> &mdash; a Gadi Eisenkot-backed lawmaker takes the chair, narrowing the PM's grip.</div></div>
+    <div class="story"><div class="head"><div class="num">7</div><div class="ico blue"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M6 40 L20 28 L30 34 L48 14" stroke-width="0"/><path d="M8 44 C22 34 34 36 46 24" stroke="#2f5fa8" stroke-width="2.6"/><circle cx="10" cy="42" r="3" fill="#2f5fa8" stroke="none"/><circle cx="27" cy="34" r="3" fill="#2f5fa8" stroke="none"/><circle cx="44" cy="25" r="3" fill="#2f5fa8" stroke="none"/><path d="M8 48 L48 48" stroke-width="1.8"/></g></svg></div><div class="txt"><div class="tag r-americas">Latin America</div><h2>Hegseth lands in Ecuador; Venezuela pact</h2></div></div><div class="body"><b>Anti-narcotics tour opens with a military accord</b> with Caracas; Honduras is the defence chief's next stop.</div></div>
+    <div class="story"><div class="head"><div class="num">8</div><div class="ico gold"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M4 28 Q14 14 27 20 Q40 26 50 14" stroke-width="2.4"/><path d="M6 36 Q16 24 27 28 Q38 32 48 24" stroke-width="2"/><path d="M10 44 L16 44 M22 44 L32 44 M38 44 L44 44" stroke-width="2.2"/></g></svg></div><div class="txt"><div class="tag r-africa">Africa</div><h2>Migrant boat capsizes off Senegal</h2></div></div><div class="body"><b>At least one dead, dozens missing</b> en route to Spain; over 11,000 have reached the Canaries in two weeks.</div></div>
+    <div class="story"><div class="head"><div class="num">9</div><div class="ico grey"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="12" y="10" width="30" height="34" rx="2" fill="#e6e2d5"/><path d="M27 10 L27 44 M16 18 L38 18 M16 26 L38 26 M16 34 L38 34" stroke-width="1.8"/><circle cx="27" cy="44" r="3" fill="#b3241f" stroke="none"/></g></svg></div><div class="txt"><div class="tag r-global">Global &middot; tech</div><h2>Java flaw sparks global patch warning</h2></div></div><div class="body"><b>US and South Korea urge users to update</b> after an AI-assisted hunt found a new flaw in Java, the world's third-most-used language.</div></div>
+    <div class="story"><div class="head"><div class="num">10</div><div class="ico red"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><rect x="6" y="36" width="42" height="12" rx="3"/><path d="M12 36 L12 24 A7 7 0 0 1 26 24 L26 36 M28 36 L28 16 A7 7 0 0 1 42 16 L42 36"/><path d="M27 12 L27 6 M21 12 L15 8 M33 12 L39 8" stroke-width="1.8"/></g></svg></div><div class="txt"><div class="tag r-apac">Asia-Pacific</div><h2>China sacks scientist after gene trial death</h2></div></div><div class="body"><b>A six-year-old died in a gene-editing trial</b>; Beijing moves to dismiss the researcher as anger spreads over oversight.</div></div>
+    <div class="story"><div class="head"><div class="num">11</div><div class="ico green"><svg width="30" height="30" viewBox="0 0 54 54"><g fill="none" stroke="#17140e" stroke-width="2.4"><path d="M8 44 L22 32 L30 36 L46 16" stroke="#2f7a3d" stroke-width="2.8"/><path d="M46 16 L46 26 M46 16 L36 16" stroke="#2f7a3d" stroke-width="2.2"/><circle cx="12" cy="44" r="3" fill="#17140e" stroke="none"/><circle cx="27" cy="36" r="3" fill="#17140e" stroke="none"/><path d="M8 50 L48 50" stroke-width="1.8"/></g></svg></div><div class="txt"><div class="tag r-apac">India</div><h2>Amazon puts $7bn into Indian renewables</h2></div></div><div class="body"><b>Solar and wind to 2030</b>; meanwhile Rajnath Singh opens the India&ndash;Japan 2+2 dialogue in Tokyo.</div></div>
   </div>
 
   <div class="bottom">
-    <div class="mapbox">
-      <div class="label">Where it happened</div>
-      <svg width="340" height="196" viewBox="0 0 340 196">
-        <g stroke="#8d8471" stroke-width="1" fill="#eae3d2">
-          <path d="M28 34 Q52 18 84 26 Q104 32 96 52 Q88 68 62 70 Q36 72 26 56 Q18 42 28 34 Z"/>
-          <path d="M70 84 Q86 78 92 92 Q100 112 88 134 Q78 150 70 140 Q58 118 62 98 Q64 88 70 84 Z"/>
-          <path d="M118 30 Q160 18 206 30 Q244 40 236 62 Q220 80 184 78 Q144 78 124 62 Q110 44 118 30 Z"/>
-          <path d="M150 92 Q168 86 176 100 Q184 116 172 128 Q160 136 152 124 Q144 106 150 92 Z"/>
-          <path d="M196 108 Q226 100 254 110 Q276 120 268 140 Q256 156 232 152 Q206 148 198 132 Q190 116 196 108 Z"/>
-          <path d="M242 38 Q280 26 310 40 Q326 50 316 66 Q300 80 272 76 Q248 70 240 56 Q234 44 242 38 Z"/>
-        </g>
-        <g font-family="Liberation Sans, Arial" font-size="9" font-weight="bold" fill="#14110a">
-          <circle cx="150" cy="40" r="8" fill="#b3241f"/><text x="150" y="43" fill="#fff" text-anchor="middle">1</text>
-          <circle cx="238" cy="58" r="8" fill="#c05e0a"/><text x="238" y="61" fill="#fff" text-anchor="middle">2</text>
-          <circle cx="86" cy="44" r="8" fill="#2f5fa8"/><text x="86" y="47" fill="#fff" text-anchor="middle">5</text>
-          <circle cx="160" cy="52" r="7" fill="#6a3f96"/><text x="160" y="55" fill="#fff" text-anchor="middle">4</text>
-          <circle cx="130" cy="52" r="6" fill="#b3241f"/><text x="130" y="54" fill="#fff" text-anchor="middle">10</text>
-          <circle cx="188" cy="46" r="6" fill="#b3241f"/><text x="188" y="49" fill="#fff" text-anchor="middle">11</text>
-          <circle cx="176" cy="94" r="6" fill="#c05e0a"/><text x="176" y="97" fill="#fff" text-anchor="middle">6</text>
-          <circle cx="164" cy="120" r="6" fill="#2f5fa8"/><text x="164" y="123" fill="#fff" text-anchor="middle">7</text>
-          <circle cx="222" cy="122" r="7" fill="#96700f"/><text x="222" y="125" fill="#fff" text-anchor="middle">8</text>
-        </g>
-        <g font-family="Liberation Sans, Arial" font-size="9" fill="#5c5443">
-          <text x="292" y="86">3 &raquo;</text>
-        </g>
-        <circle cx="317" cy="64" r="3" fill="#2f7a3d"/>
-      </svg>
-      <div class="legend">
-        <span><i style="background:#b3241f"></i>Asia-Pacific</span>
-        <span><i style="background:#c05e0a"></i>Middle East</span>
-        <span><i style="background:#6a3f96"></i>Europe</span>
-        <span><i style="background:#96700f"></i>Africa</span>
-        <span><i style="background:#2f5fa8"></i>Americas</span>
-        <span><i style="background:#5c5443"></i>Global-climate</span>
-        <span><i style="background:#2f7a3d"></i>Global-tech</span>
-      </div>
-    </div>
-
-    <div class="also">
-      <div class="label">Also on Thursday 19 November</div>
-      <div class="cols">
-        <div class="item"><span class="n">12.</span> <b>Shenzhen:</b> Trump&ndash;Putin bilateral ran 42 minutes</div>
-        <div class="item"><span class="n">13.</span> <b>Moscow:</b> Xi and Putin back 'free and open trade'</div>
-        <div class="item"><span class="n">14.</span> <b>UN:</b> joint vow to avoid nuclear war, rein in the ICC</div>
-        <div class="item"><span class="n">15.</span> <b>Antalya:</b> Global Stocktake opens, 21 issues left</div>
-        <div class="item"><span class="n">16.</span> <b>Washington:</b> man jailed 27 years for Trump plot</div>
-        <div class="item"><span class="n">17.</span> <b>London:</b> US soldier held for spying handed over</div>
-        <div class="item"><span class="n">18.</span> <b>Siberia:</b> military transport crash kills 19</div>
-        <div class="item"><span class="n">19.</span> <b>Dhaka:</b> arson wave tied to Hasina's return</div>
-        <div class="item"><span class="n">20.</span> <b>Kashmir:</b> Lashkar militant Lateef Bhat killed</div>
-        <div class="item"><span class="n">21.</span> <b>Tokyo:</b> Rajnath opens India&ndash;Japan 2+2</div>
-        <div class="item"><span class="n">22.</span> <b>Delhi:</b> CBI reopens Balabhaskar death case</div>
-        <div class="item"><span class="n">23.</span> <b>Mumbai:</b> SpiceJet breakdown strands flyers</div>
-        <div class="item"><span class="n">24.</span> <b>Bengaluru:</b> police get first chief commissioner</div>
-        <div class="item"><span class="n">25.</span> <b>Wellington:</b> India face NZ in the first Test</div>
-        <div class="item"><span class="n">26.</span> <b>Badminton:</b> Sindhu back in the world top five</div>
-        <div class="item"><span class="n">27.</span> <b>Football:</b> AIFF flags alleged racist gesture</div>
-        <div class="item"><span class="n">28.</span> <b>Colleges:</b> US foreign applicants up 9%</div>
-        <div class="item"><span class="n">29.</span> <b>Chicago:</b> man attacks passenger mid-flight</div>
-        <div class="item"><span class="n">30.</span> <b>Canaries:</b> 11,000+ migrants in two weeks</div>
-        <div class="item"><span class="n">31.</span> <b>Airlines:</b> no European carrier in top ten</div>
-        <div class="item"><span class="n">32.</span> <b>Punjab:</b> farmer wins Rs 12-crore lottery</div>
-        <div class="item"><span class="n">33.</span> <b>Bihar:</b> robbers film Rs 40-crore heist</div>
-        <div class="item"><span class="n">34.</span> <b>Delhi:</b> court upholds Azam Khan's bail</div>
-        <div class="item"><span class="n">35.</span> <b>NATO:</b> policy chief debriefs APEC talks</div>
-        <div class="item"><span class="n">36.</span> <b>Jharkhand:</b> three workers die at thermal plant</div>
-        <div class="item"><span class="n">37.</span> <b>Honduras:</b> Hegseth closes the anti-drugs tour</div>
-        <div class="item"><span class="n">38.</span> <b>Brussels:</b> Pakistan FM pitches security plan</div>
-        <div class="item"><span class="n">39.</span> <b>Shenzhen:</b> Musk misses Trump's summit delegation</div>
-        <div class="item"><span class="n">40.</span> <b>Delhi:</b> Modi, voice cracking, vows to end drug menace</div>
-      </div>
-    </div>
+    <div class="mapbox"><div class="label">Where it happened</div><svg width="340" height="196" viewBox="0 0 340 196"><g stroke="#8d8471" stroke-width="1" fill="#eae3d2"><path d="M28 34 Q52 18 84 26 Q104 32 96 52 Q88 68 62 70 Q36 72 26 56 Q18 42 28 34 Z"/><path d="M70 84 Q86 78 92 92 Q100 112 88 134 Q78 150 70 140 Q58 118 62 98 Q64 88 70 84 Z"/><path d="M118 30 Q160 18 206 30 Q244 40 236 62 Q220 80 184 78 Q144 78 124 62 Q110 44 118 30 Z"/><path d="M150 92 Q168 86 176 100 Q184 116 172 128 Q160 136 152 124 Q144 106 150 92 Z"/><path d="M196 108 Q226 100 254 110 Q276 120 268 140 Q256 156 232 152 Q206 148 198 132 Q190 116 196 108 Z"/><path d="M242 38 Q280 26 310 40 Q326 50 316 66 Q300 80 272 76 Q248 70 240 56 Q234 44 242 38 Z"/></g><g font-family="Liberation Sans,Arial" font-size="9" font-weight="bold" fill="#14110a"><circle cx="150" cy="40" r="8" fill="#b3241f"/><text x="150" y="43" fill="#fff" text-anchor="middle">1</text><circle cx="238" cy="58" r="8" fill="#c05e0a"/><text x="238" y="61" fill="#fff" text-anchor="middle">2</text><circle cx="86" cy="44" r="8" fill="#2f5fa8"/><text x="86" y="47" fill="#fff" text-anchor="middle">5</text><circle cx="160" cy="52" r="7" fill="#6a3f96"/><text x="160" y="55" fill="#fff" text-anchor="middle">4</text><circle cx="130" cy="52" r="6" fill="#b3241f"/><text x="130" y="54" fill="#fff" text-anchor="middle">10</text><circle cx="188" cy="46" r="6" fill="#b3241f"/><text x="188" y="49" fill="#fff" text-anchor="middle">11</text><circle cx="176" cy="94" r="6" fill="#c05e0a"/><text x="176" y="97" fill="#fff" text-anchor="middle">6</text><circle cx="164" cy="120" r="6" fill="#2f5fa8"/><text x="164" y="123" fill="#fff" text-anchor="middle">7</text><circle cx="222" cy="122" r="7" fill="#96700f"/><text x="222" y="125" fill="#fff" text-anchor="middle">8</text></g><g font-family="Liberation Sans,Arial" font-size="9" fill="#5c5443"><text x="292" y="86">3 &raquo;</text></g><circle cx="317" cy="64" r="3" fill="#2f7a3d"/></svg><div class="legend"><span><i style="background:#b3241f"></i>Asia-Pacific</span><span><i style="background:#c05e0a"></i>Middle East</span><span><i style="background:#6a3f96"></i>Europe</span><span><i style="background:#96700f"></i>Africa</span><span><i style="background:#2f5fa8"></i>Americas</span><span><i style="background:#5c5443"></i>Global-climate</span><span><i style="background:#2f7a3d"></i>Global-tech</span></div></div>
+    <div class="also"><div class="label">Also on Thursday 19 November</div><div class="cols">
+      <div class="item"><span class="n">12.</span> <b>Shenzhen:</b> Trump&ndash;Putin bilateral ran 42 minutes</div>
+      <div class="item"><span class="n">13.</span> <b>Moscow:</b> Xi and Putin back 'free and open trade'</div>
+      <div class="item"><span class="n">14.</span> <b>UN:</b> joint vow to avoid nuclear war, rein in the ICC</div>
+      <div class="item"><span class="n">15.</span> <b>Antalya:</b> Global Stocktake opens, 21 issues left</div>
+      <div class="item"><span class="n">16.</span> <b>Washington:</b> man jailed 27 years for Trump plot</div>
+      <div class="item"><span class="n">17.</span> <b>London:</b> US soldier held for spying handed over</div>
+      <div class="item"><span class="n">18.</span> <b>Siberia:</b> military transport crash kills 19</div>
+      <div class="item"><span class="n">19.</span> <b>Dhaka:</b> arson wave tied to Hasina's return</div>
+      <div class="item"><span class="n">20.</span> <b>Kashmir:</b> Lashkar militant Lateef Bhat killed</div>
+      <div class="item"><span class="n">21.</span> <b>Tokyo:</b> Rajnath opens India&ndash;Japan 2+2</div>
+      <div class="item"><span class="n">22.</span> <b>Delhi:</b> CBI reopens Balabhaskar death case</div>
+      <div class="item"><span class="n">23.</span> <b>Mumbai:</b> SpiceJet breakdown strands flyers</div>
+      <div class="item"><span class="n">24.</span> <b>Bengaluru:</b> police get first chief commissioner</div>
+      <div class="item"><span class="n">25.</span> <b>Wellington:</b> India face NZ in the first Test</div>
+      <div class="item"><span class="n">26.</span> <b>Badminton:</b> Sindhu back in the world top five</div>
+      <div class="item"><span class="n">27.</span> <b>Football:</b> AIFF flags alleged racist gesture</div>
+      <div class="item"><span class="n">28.</span> <b>Colleges:</b> US foreign applicants up 9%</div>
+      <div class="item"><span class="n">29.</span> <b>Chicago:</b> man attacks passenger mid-flight</div>
+      <div class="item"><span class="n">30.</span> <b>Canaries:</b> 11,000+ migrants in two weeks</div>
+      <div class="item"><span class="n">31.</span> <b>Airlines:</b> no European carrier in top ten</div>
+      <div class="item"><span class="n">32.</span> <b>Punjab:</b> farmer wins Rs 12-crore lottery</div>
+      <div class="item"><span class="n">33.</span> <b>Bihar:</b> robbers film Rs 40-crore heist</div>
+      <div class="item"><span class="n">34.</span> <b>Delhi:</b> court upholds Azam Khan's bail</div>
+      <div class="item"><span class="n">35.</span> <b>NATO:</b> policy chief debriefs APEC talks</div>
+      <div class="item"><span class="n">36.</span> <b>Jharkhand:</b> three workers die at thermal plant</div>
+      <div class="item"><span class="n">37.</span> <b>Honduras:</b> Hegseth closes the anti-drugs tour</div>
+      <div class="item"><span class="n">38.</span> <b>Brussels:</b> Pakistan FM pitches security plan</div>
+      <div class="item"><span class="n">39.</span> <b>Shenzhen:</b> Musk misses Trump's summit delegation</div>
+      <div class="item"><span class="n">40.</span> <b>Delhi:</b> Modi, voice cracking, vows to end drug menace</div>
+    </div></div>
   </div>
 
   <div class="data">
-    <div class="cell">
-      <div class="cl">Trump &ndash; Putin</div>
-      <div class="cv">42 min</div>
-      <div class="cs">bilateral before the summit</div>
-    </div>
-    <div class="cell">
-      <div class="cl">COP31 &middot; open issues</div>
-      <div class="cv">21</div>
-      <div class="cs">still deadlocked in Antalya</div>
-    </div>
-    <div class="cell">
-      <div class="cl">T&uuml;rkiye 35&times;35 target</div>
-      <svg width="128" height="30" viewBox="0 0 120 30"><g fill="none" stroke="#8d8471" stroke-width="1"><path d="M4 25 L116 25"/><path d="M4 5 L4 25"/></g><path d="M4 21 L18 20 L32 21 L46 19 L60 20 L74 18 L88 17 L102 13 L116 10" fill="none" stroke="#2f7a3d" stroke-width="2.2"/><circle cx="116" cy="10" r="2.6" fill="#2f7a3d"/></svg>
-      <div class="cs"><b>75 countries</b> back 35% clean power by 2035</div>
-    </div>
-    <div class="cell">
-      <div class="cl">Canary arrivals</div>
-      <div class="cv">11,000+</div>
-      <div class="cs">reached in November's first two weeks</div>
-    </div>
+    <div class="cell"><div class="cl">Trump &ndash; Putin</div><div class="cv">42 min</div><div class="cs">bilateral before the summit</div></div>
+    <div class="cell"><div class="cl">COP31 &middot; open issues</div><div class="cv">21</div><div class="cs">still deadlocked in Antalya</div></div>
+    <div class="cell"><div class="cl">T&uuml;rkiye 35&times;35 target</div><svg width="128" height="30" viewBox="0 0 120 30"><g fill="none" stroke="#8d8471" stroke-width="1"><path d="M4 25 L116 25"/><path d="M4 5 L4 25"/></g><path d="M4 21 L18 20 L32 21 L46 19 L60 20 L74 18 L88 17 L102 13 L116 10" fill="none" stroke="#2f7a3d" stroke-width="2.2"/><circle cx="116" cy="10" r="2.6" fill="#2f7a3d"/></svg><div class="cs"><b>75 countries</b> back 35% clean power by 2035</div></div>
+    <div class="cell"><div class="cl">Canary arrivals</div><div class="cv">11,000+</div><div class="cs">reached in November's first two weeks</div></div>
   </div>
 
-  <div class="datecheck">
-    <b class="dc">Date check</b> &nbsp;Every story above is dated Thursday 19 November 2026. On <b>Wednesday 18 November</b>: Xi greeted Trump with a hug and red carpet at Shenzhen airport &middot; Voyager 1 crossed one light-day from Earth at 10:16 UTC &middot; US jets struck Qeshm Island.
-  </div>
-
-  <div class="foot">
-    <span>40 stories &middot; Thursday 19 November 2026 &middot; claims attributed as reported &middot; original drawings</span>
-    <span>Sources: AP &middot; Reuters &middot; AFP &middot; CNN &middot; BBC &middot; Al Jazeera &middot; Euronews &middot; DW &middot; NBC &middot; NDTV &middot; UN News &middot; Times of India</span>
-  </div>
-
+  <div class="datecheck"><b class="dc">Date check</b> &nbsp;Every story above is dated Thursday 19 November 2026. On <b>Wednesday 18 November</b>: Xi greeted Trump with a hug and red carpet at Shenzhen airport &middot; Voyager 1 crossed one light-day from Earth at 10:16 UTC &middot; US jets struck Qeshm Island.</div>
+  <div class="foot"><span>40 stories &middot; Thursday 19 November 2026 &middot; claims attributed as reported &middot; original drawings</span><span>Sources: AP &middot; Reuters &middot; AFP &middot; CNN &middot; BBC &middot; Al Jazeera &middot; Euronews &middot; DW &middot; NBC &middot; NDTV &middot; UN News &middot; Times of India</span></div>
 </div>
 </body>
 </html>
